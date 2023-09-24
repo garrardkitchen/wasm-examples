@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Wasm Basic demo</title>
+        <link rel="shortcut icon" href="#">
+    </head>
+
+
+    <body>
+        <h1>Wasm Basic Demo: C</h1>
+        <br/>
+        <div><input type="number" id="input" value="123"/> </div>
+        <div id="label"></div>
+
+        <script>
+
+            function updateLabel(val) {
+                document.getElementById("label").innerText = val
+            }
+
+            function getNumber() {
+                // console.log(document.getElementById("input").value)
+                return document.getElementById("input").value
+            }
+
+            const importObject = {
+                env : {
+                    log: console.log,
+                    input: getNumber,
+                    label: updateLabel 
+                }
+            }
+
+            async function start() {
+
+                const wasm = await WebAssembly.instantiateStreaming(fetch("program.wasm"), importObject)
+                window.wasm = wasm
+                console.log('Ready')
+
+            }
+
+            start()
+    
+        </script>
+
+    </body>
+
+</html>
