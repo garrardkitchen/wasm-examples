@@ -6,7 +6,7 @@ To build both wasm and JS wrapper, use emscripten.
 docker pull emscripten/emsdk
 ```
 
-Ensure Docker for Desktop is running, then build binary format:
+Ensure Docker for Desktop is running, then build the wasm binary format file:
 
 **Step 1** - CD into this folder
 
