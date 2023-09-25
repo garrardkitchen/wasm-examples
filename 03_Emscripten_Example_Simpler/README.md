@@ -11,7 +11,7 @@ Ensure Docker for Desktop is running, then build the wasm binary format file:
 **Step 1** - CD into this folder
 
 ```powershell
-cd 02_Emscripten_Example
+cd 03_Emscripten_Example_Simpler
 ```
 
 **Step 2** - build wasm

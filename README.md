@@ -34,3 +34,9 @@ In this next example, we're not delegating the creation of the html file to the 
 This example uses a docker container to build the wasm file, instead of install all the of the toolchain into your local environment.  
 
 [Emscripten Example](/03_Emscripten_Example_Simpler/README.md)
+
+## Emscripten example - return a string
+
+Here we show how to return a value and how to update it's value in memory. 
+
+[Emscripten Example](/04_Emscripten_Example_String/README.md)
